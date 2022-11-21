@@ -189,9 +189,17 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             }
         }
 
+        accionesExtra(respuesta);
         responder(respuesta);
         //ESTE METODO LO QUE HACE ES ESCUCHAR Y REALIZAR LAS ACCIONES
 }
+    
+    /* METODO PARA REALIZAR ACCIONES ADEMAS DE RESPONDER <- RECIBE MISMO PARAMETRO DE RESPUESTA*/ 
+    private accionesExtra ( String accion ) {
+        if ( accion.equals( "abriendo camara" ) ){
+            abrirCamara();
+        } // METODO HECHO PARA PODER AGREGAR MAS ACCIONES FUTURAS   
+    }
 
     private String operacion(String cuestion, String escuchado) { //se puso este metodo par poner case if con las
         String rpta = "";                                         // 4 operaciones basicas .
@@ -294,7 +302,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         respuestas.add(new Respuestas("entre ", "La respuesta de la division es" ));
         respuestas.add(new Respuestas("menos ", "La respuesta de la resta es" ));
         respuestas.add(new Respuestas("mas ", "La respuesta de la suma es" ));
-        respuestas.add(new Respuestas("abrir camara ", "abriendo camara" ));
+        respuestas.add(new Respuestas("Abrir camara ", "abriendo camara" ));
 
         return respuestas;
     }
