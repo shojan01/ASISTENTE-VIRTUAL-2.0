@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 }
     
     /* METODO PARA REALIZAR ACCIONES ADEMAS DE RESPONDER <- RECIBE MISMO PARAMETRO DE RESPUESTA*/ 
-    private accionesExtra ( String accion ) {
+    private void accionesExtra ( String accion ) {
         if ( accion.equals( "abriendo camara" ) ){
             abrirCamara();
         } // METODO HECHO PARA PODER AGREGAR MAS ACCIONES FUTURAS   
